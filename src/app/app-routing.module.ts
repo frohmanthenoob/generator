@@ -4,14 +4,10 @@ import { MemePreviewComponent } from './meme-preview/meme-preview.component';
 import { MemeMakerComponent } from './meme-maker/meme-maker.component';
 
 const routes: Routes = [
-  {
-  path: '',
-  component: MemePreviewComponent
-  },
-  {
-    path: 'make',
-    component: MemeMakerComponent
-    }
+  {  path: '',  component: MemePreviewComponent  },
+  {  path: 'make', redirectTo: '/', pathMatch: 'full'  },
+  {  path: 'make/:img', component: MemeMakerComponent  },
+  {  path: '**', redirectTo: '/', pathMatch: 'full'  }
   ];
 
 @NgModule({
