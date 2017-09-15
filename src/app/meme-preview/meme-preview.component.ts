@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meme-preview.component.css']
 })
 export class MemePreviewComponent implements OnInit {
-
-  constructor() { }
+  picID: string;
+  constructor() {
+    this.picID = 'pic1';
+   }
 
   ngOnInit() {
   }
